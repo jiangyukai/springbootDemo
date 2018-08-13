@@ -4,11 +4,16 @@
  * @Description:
  */
 
+import com.zzj.controller.UserController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.HashMap;
 
 /**
  *@className SampleController
@@ -17,16 +22,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
  *@Date 2018-8-10 17:01
  *@Version 1.0
  **/
-@Controller
 @EnableAutoConfiguration
-public class SampleController {
-    @RequestMapping("/")
-    @ResponseBody
-    String home() {
-        return "Hello  World 123!";
-    }
+@SpringBootApplication
+public class Application {
+
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(SampleController.class, args);
+        SpringApplication.run(Application.class, args);
     }
 }
